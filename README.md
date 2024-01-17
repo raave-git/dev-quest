@@ -1,0 +1,1 @@
+jan, 17, 12.024 EH. 12:43pm. Configuração inicial do Git.
