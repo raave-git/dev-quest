@@ -1,0 +1,21 @@
+body {
+    background-color: blueviolet;
+    width: 50%;
+}
+
+.pai {
+    background-color: orange;
+}
+
+.filho {
+    background-color: aqua;
+}
+
+.parentes {
+    color: white;
+}
+
+#google{
+    width: 100px;
+    height: auto;
+}
