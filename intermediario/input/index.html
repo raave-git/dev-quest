@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Entrada de informações no HTML</h1>
+
+    <p>A tag input tem por padrão que a entrada será um texto.</p>
+    
+    <p>Digite seu nome:</p>
+
+    <input type="text" name="nome" id="inp_nome" value="Raavë L Aires">
+        <!--o atributo "value" define um valor padrão na tag "input", mas ele é sempre sobrescrito na hora de enviar pelo que o usuário digitar, usar o "placeholder" me parece uma ideia melhor-->
+    
+    <br> <label for="in_email">E-mail:</label>
+            <input type="email" name="email" id="in_email" placeholder="seu@email.com">
+
+    <br> <label for="idade">Idade: </label>
+            <input type="number" name="idade" id="idade" placeholder="99">
+
+    <br> <label for="in_senha">Senha: </label>
+            <input type="password" name="senha" id="in_senha" placeholder="uD#^kGa3uCca3*mNiSZARnKtju2">
+
+    <input type="submit" value="É isso.">
+    <!--O atributo "value" altera o texto do botão.-->
+
+    <form action="">
+        <h3>Linguagens de programação</h3>
+            <label for="js">JavaScript</label>
+                <input type="checkbox" name="linguagens" id="js" checked>
+                <!--"checked" faz com que o checkbox já venha marcado por padrão-->
+
+            <label for="kt">Kotlin</label>
+                <input type="checkbox" name="linguagens" id="kt">
+
+            <label for="sf">Swift</label>
+                <input type="checkbox" name="linguagens" id="sf">    
+            <!--É necessário que todos os elementos de um grupo de input checkbox, por exemplo, tenham nomes iguais-->
+    </form>
+
+    <form action="">
+        <h3>Gênero</h3>
+            <label for="male">Maculino</label>
+                <input type="radio" name="genero" id="male">
+
+            <label for="female">Feminino</label>
+                <input type="radio" name="genero" id="female">
+
+            <label for="outro">Outro</label>
+                <input type="radio" name="genero" id="outro">
+    </form>
+
+    <form action="">
+        <h3>Livro</h3>
+        <label for="livros">Qual seu livro favorito?</label>
+        <select name="livros" id="livros">
+            <!--Da pra permitir que o usuário selecione várias opções usando na tag "select" o atributo "multiple".-->
+
+            <option value="">Selecione um livro</option>
+            <option value="Nascidos da Bruma">Nascidos da Bruma, Brandon Sanderson</option>
+            <option value="A Roda do Tempo">A Roda do Tempo, Robert Jordan</option>
+            <option value="Os Relatos da Guerra das Tempestades" selected>Os Relatos da Guerra das Tempestades, Brandon Sanderson</option>
+
+            <!--O atributo "selected" faz a vez do "checked" na tag "select"-->
+            <option value="As Crônicas de Gelo e Fogo">As Crônicas de Gelo e Fogo, George R.R. Martin</option>
+        </select>
+
+        <!--Diferente de da tag "input" onde a value é sobrescrito pelo que o usuário digitar, na "select" é ele que é enviado ao back-end-->
+    </form>
+    <label for="texto_comp">Há outras informações que você ache importante?</label> <br>
+        <textarea name="texto_comp" id="texto_comp" cols="30" rows="10" placeholder="Eu posso..."></textarea>
+</body>
+
+</html>
