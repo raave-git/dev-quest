@@ -1,0 +1,22 @@
+@font-face {
+    font-family: now-bold;
+    src: url('./fonts/now-bold.otf');
+}
+
+.laire {
+    font-family: now-bold;
+}
+
+#titulo {
+    font-size: small;
+    background-color: black;
+    color: white;
+}
+
+#letra-e {
+    color: orange;
+}
+
+.cabecalho {
+    background-color: ;
+}

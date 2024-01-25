@@ -1,0 +1,24 @@
+html {
+    cursor: wait;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+}
+
+
+/*Ao que parece, "hover" é mais forte que "active"*/
+a:active { /*usada para estilizar o link quando se clica nele e durante a duração do click*/
+    color: red;
+    background-color: black;
+}
+
+a:hover { /*usada para estilizar o link quando se põe o mouse acima dele*/
+    cursor: wait;
+    color: blue;
+    background-color: gray;
+}
