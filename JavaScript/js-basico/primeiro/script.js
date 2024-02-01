@@ -34,9 +34,9 @@ function escreva(texto){
 //     alert('O boleto não foi pago.')
 // }
 
-function pergunte (){
-    let pergunta = confirm("És bem-vindo, aventureiro. Queres pagar R$ 50 pela noite na nossa hospedagem?")
-    return pergunta
+function pergunte(){
+    let confirme = confirm("És bem-vindo, aventureiro. Queres pagar R$ 50 pela noite na nossa hospedagem?")
+    return confirme
 }
 
 let conf = pergunte()
@@ -45,6 +45,8 @@ let conf = pergunte()
     } else if(conf===false){
         alert('Que pena. Você parecia ser uma pessoa melhor.')
     }
+
+pergunte();
 
 for (let i=0; i<=10; i++) {
     console.log('O número atual é ' + i)

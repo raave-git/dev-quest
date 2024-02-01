@@ -1,0 +1,12 @@
+.quadrado{
+    width: 100px;
+    height: 100px;
+}
+
+.corUm {
+    background-color: blue;
+}
+
+.corDois {
+    background-color: red;
+}

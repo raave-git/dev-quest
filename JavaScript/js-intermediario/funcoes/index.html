@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS Intermediário</title>
+</head>
+
+<body>
+    <header>
+        <h1>Conceitos intermediários de JavaScript</h1>
+    </header>
+
+    <main>
+        <section> <!-- Hoisting, ou Içamento: -->
+            <article>
+                <h2>Hoisting, ou Içamento:</h2>
+
+                <p>No JavaScript, o conceito de "hoisting" (ou içamento) é um comportamento que move as declarações de variáveis e funções para o topo do escopo onde foram definidas, independentemente de onde aparecem no código. Isso ocorre durante a fase de "compilação" do JavaScript.</p>
+
+                <p>Existem três tipos de declarações de variáveis em JavaScript: <code>var</code>, <code>let</code> e <code>const</code>. Cada uma delas tem um comportamento diferente quando se trata de hoisting:</p>
+
+                <ul>
+                    <li>
+                        <p>
+                            <strong>var:</strong> As declarações de variáveis são movidas para o topo do escopo, mas a inicialização não. Isso significa que se você tentar acessar uma variável <code>var</code> antes de sua declaração, obterá <code>undefined</code>.
+
+                            <pre>
+                                <code>
+                                    console.log(meuNome); // resulta em undefined
+                                    var meuNome = "João";
+                                </code>
+                            </pre>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <strong>let e const:</strong> Ao contrário de <code>var</code>, as declarações <code>let</code> e <code>const</code> não são totalmente içadas. Se você tentar acessar uma variável <code>let</code> ou <code>const</code> antes de sua declaração, obterá um erro de referência.
+
+                            <pre>
+                                <code>
+                                    console.log(meuNome); // resulta em ReferenceError
+                                    let meuNome = "João";
+                                </code>
+                            </pre>
+                        </p>
+                    </li>
+                </ul>
+            </article>           
+        </section>
+
+        <section> <!-- Escorpo em JavaScript: -->
+            <article>
+                <h2>Escorpo em JavaScript</h2>
+
+                <script src="script.js"></script>
+            </article>
+        </section>
+
+        <section> <!-- Funções anônimas: -->
+            <article>
+                <h2>Funções anônimas</h2>
+
+                <p>As funções anônimas em JavaScript são funções que não possuem um nome. Elas são importantes para entender alguns dos conceitos do funcionamento da linguagem JavaScript. Essas funções podem ser atribuídas a uma variável ou passadas como argumento para outras funções.</p>
+
+                <p>Aqui está um exemplo de uma função anônima atribuída a uma variável:</p>
+
+                <pre>
+                    <code>
+                        const multiplicar = function(a, b) {
+                            return a * b;
+                        };
+                    </code>
+                </pre>
+                
+                <p>Neste exemplo, a função que multiplica <em>a</em> e <em>b</em> não tem um nome próprio, então é considerada uma função anônima. A variável <em>multiplicar</em> se refere a essa função.</p>
+
+                <p>As funções anônimas também são muito importantes para entender alguns dos conceitos do funcionamento da linguagem JavaScript, como closures. Uma closure ocorre quando uma função tem acesso ao escopo pai, mesmo depois que o escopo pai foi fechado.</p>
+
+                <p>Aqui está um exemplo de uma closure usando uma função anônima:</p>
+
+                <pre>
+                    <code>
+                        function saudacao(nome){
+                            return function(){
+                              console.log('Olá, ' + nome);
+                            }
+                          }
+
+                        let saudacaoJoao = saudacao('João');
+                        saudacaoJoao();  // Saída: Olá, João
+                    </code>
+                </pre>
+
+                <p>Neste exemplo, a função anônima tem acesso à variável `nome` do escopo pai, mesmo depois que a função `saudacao` terminou de executar. Isso é uma closure.</p>
+
+                <div>
+                    <h3>Exemplos de funções anônimas: </h3>
+
+                    <script src="anon-func.js"></script>
+                </div>
+                
+            </article>
+        </section>
+
+        <section> <!-- Funções em flecha (arrow function's)-->
+            <article>
+                <h3>Arrow function's</h3>
+
+                <p>São funções com uma sintaxe mais curta, elas são sempre anônimas. Eis um exemplo de uma Arrow Function:</p>
+
+                <pre>
+                    <code>
+                        const multiplicar = (a, b) => {
+                            return a * b;
+                          };                          
+                    </code>
+                </pre>
+
+
+                <p>Neste exemplo, a função que multiplica `a` e `b` é uma Arrow Function. A variável `multiplicar` se refere a essa função. As Arrow Functions têm algumas diferenças semânticas e limitações deliberadas em comparação com as funções tradicionais:</p>
+
+                <ul>
+                    <li>
+                        <p>As Arrow Functions não têm suas próprias ligações para <code>this</code>, <code>arguments</code> ou <code>super</code>, e não devem ser usadas como métodos.</p>
+                    </li>
+                    
+                    <li>
+                        <p>Elas também não têm acesso à palavra-chave <code>new.target</code></p>
+                    </li>
+
+                    <li>
+                        <p>As Arrow Functions não podem usar <code>yield</code> dentro de seu corpo e não podem ser criadas como funções geradoras.</p>
+                    </li>
+
+                    <li>
+                        <p>As Arrow Functions não podem ser usadas como construtores. Chamá-las com <code>new</code> lança um TypeError.</p>
+                    </li>
+                </ul>
+
+                <p>Além disso, se a função tem apenas uma declaração e a declaração retorna um valor, é possível remover as chaves e a palavra-chave <code>return</code>:</p>
+                
+                <code>const multiplicar = (a, b) => a * b;</code><br>
+                
+                <script src="func-em-flecha.js"></script>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>High order functions, ou Funções de ordem superior</h2>
+                
+                <p>As funções de ordem superior (Higher Order Functions) em JavaScript são funções que podem realizar operações em outras funções. Essas operações podem incluir receber uma ou mais funções como argumentos ou retornar uma função como resultado. Elas não precisam necessariamente fazer ambas as coisas, fazendo uma ou outra já qualifica uma função como de ordem superior. <br>Eis um exemplo de função de ordem superior:</p>
+
+                <pre>
+                    <code>
+                        const numeros = [1, 2, 3, 4, 5];
+                            numeros.forEach((numero) => console.log(numero + 1));
+                    </code>
+                </pre>
+
+                <p>Neste exemplo, a função <code>forEach()</code> é uma função de ordem superior. Ela recebe uma função anônima como argumento que é aplicada a cada elemento do array. <br>Outro exemplo seria:</p>
+
+                <pre>
+                    <code>
+                        const numeros = [1, 2, 3, 4, 5];
+
+                        function isOdd(array, oddArr = []) {
+                        for (let i = 0; i < array.length; i++) {
+                            if (array[i] % 2 !== 0) {
+                            oddArr.push(array[i]);
+                            }
+                        }
+                        return oddArr;
+                        }
+
+                        const oddArray = isOdd(numeros);
+                        console.log(oddArray);
+                    </code>
+                </pre>
+
+                <p>Neste exemplo, a função <code>isOdd()</code> é uma função de ordem superior que retorna um novo array contendo apenas os números ímpares do array original.</p>
+
+                <p>Essas funções permitem uma maior abstração, composição e criação de código mais flexível e reutilizável. Em JavaScript, as funções são tratadas como cidadãos de primeira classe, o que significa que podemos tratar funções como valores e atribuí-las a outra variável, passá-las como argumentos para outra função ou até mesmo retorná-las de outra função. Esta capacidade das funções de agir como funções de primeira classe é o que alimenta as funções de ordem superior em JavaScript.</p>
+
+                <script src="high-orde-func.js"></script>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

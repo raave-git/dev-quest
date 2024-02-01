@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Manipulando o DOM</title>
+</head>
+
+<body>
+    <h1>Manipulando o DOM</h1>
+    
+    <main>
+        <section> <!-- Funções de seleção de elementos -->
+            <article>
+                <h2>Funções de seleção de elementos</h2>
+            
+                <ol>
+                    <li> <!-- getElementById("id") -->
+                        <p><code>getElementById("id"):</code> Esta função retorna a referência do elemento através do seu ID. Se um elemento com o ID especificado não estiver contido neste documento, retorna null1. Por exemplo:</p>
+                        
+                        <p id="meuId">Este é um parágrafo com a o id "meuId"</p>
+                    </li>
+        
+                    <li> <!-- getElementsByClassName("nomeDaClasse") -->
+                        <p><code>getElementsByClassName("nomeDaClasse"):</code> Esta função retorna uma lista de todos os elementos filhos que possuem o nome da classe especificada.</p>
+        
+                        <p class="minhaClasse">Este é o primeiro parágrafo com a classe "minhaClasse".</p>
+                        <p class="minhaClasse">Este é o segundo parágrafo com a classe "minhaClasse".</p>
+                    </li>
+        
+                    <li> <!-- getElementsByTagName("nomeDaTag") -->
+                        <p><code>getElementsByTagName("nomeDaTag"):</code> Esta função retorna uma lista de todos os elementos filhos com o nome da tag especificada.</p>
+        
+                        <pre id="tagPre">Este é o primeiro parágrafo usando a tag "pre".</pre>
+                        <pre id="tagPre">Este é o segundo parágrafo usando a tag "pre"</pre>
+                    </li>
+        
+                    <li> <!-- getElementsByName("nome") -->
+                        <p><code>getElementsByName(nome):</code> Esta função retorna uma lista de todos os elementos filhos com o nome especificado.</p>
+        
+                        <input type="text" name="meuNome" value="Primeiro input com o nome 'meuNome'">
+                        <input type="text" name="meuNome" value="Segundo input com o nome 'meuNome'">
+                    </li>
+                </ol>
+            
+                <script src="selecao-de-elementos.js"></script>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

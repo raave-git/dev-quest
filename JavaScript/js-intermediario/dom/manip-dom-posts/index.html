@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Manipulação do DOM e estilos</title>
+</head>
+<body>
+    <section> <!-- Manipulando o DOM -->
+        <article>
+            <h2>Manipulando o DOM</h2>
+
+            <div class="posts"  id="post"">
+
+                <p ><strong>Raavë Aires</strong> <span>@raave_x - há 9 minutos atrás</span></p>
+                <p class="texto-post">Com este commit, o último pull request desse SCRUM complexificou o merge de compilação multi-plataforma de forma asincrona. Desde ontem a noite a compilação final do programa deletou todas as entradas do JSON compilado a partir de proto-buffers. Com este commit, o gerenciador de dependências do frontend complexificou o merge do fluxo de dados de forma retroativa no server.</p><br>
+
+                <div class="comentarios">
+                    <h3>Comentários</h3>
+                    <input type="text" name="novo-comentario" id="novo-post" placeholder="Digite o seu comentário.">
+                    <button onclick="postar()">Postar comentário</button>
+                </div><br>
+                
+                <div id="novo-comentario"></div>
+            </div>
+
+            <script src="manipuando-o-dom-posts.js"></script>
+        </article>
+    </section>
+
+    <section> <!-- Manipulando o DOM e estilos CSS -->
+        <article>
+            <h2>Manipulando estilos CSS</h2>
+
+            <button onclick="alterarCor()">Alterar cor</button>
+            <br><br>
+            <button onclick="alterarFonte()">Alterar fonte</button>
+            <div class="posts" id="post"">
+
+                <p><strong>Raavë Aires</strong> <span>@raave_x - há 9 minutos atrás</span></p>
+                <p class="texto-post">É importante questionar o quanto o entendimento das metas propostas faz parte de um processo de gerenciamento das formas de ação. Pensando mais a longo prazo, a execução dos pontos do programa garante a contribuição de um grupo importante na determinação das formas de ação. No mundo atual, a revolução dos costumes promove a alavancagem do levantamento das variáveis envolvidas.</p><br>
+
+                <div class="comentarios">
+                    <h3>Comentários</h3>
+                    <input type="text" name="novo-comentario" id="novo-post" placeholder="Digite o seu comentário.">
+                    <button onclick="postar()">Postar comentário</button>
+                </div><br>
+                
+                <div id="novo-comentario"></div>
+            </div>
+
+            <script src="manipulando-o-dom-estilos.js"></script>
+        </article>
+    </section>
+</body>
+</html>
