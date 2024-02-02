@@ -1,0 +1,56 @@
+@font-face {
+    font-family: now-bold;
+    src: url('fonts/now-bold.otf');
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url('fonts/Open_Sans/static/OpenSans-Medium.ttf  ');
+}
+
+.cabecalho {
+    position: fixed;
+    background-color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60px;
+
+    overflow: hidden;
+}
+
+.nav-bar {
+    position: fixed;
+    background-color: #eea243;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10px;
+}
+
+.nav-itens li {
+    font-family: open-sans;
+    display: inline;
+    margin: 0 8px 0 8px;
+    cursor: pointer;
+}
+
+.nav-itens li a {
+    margin: 0 8px 0 8px;
+}
+
+#logo {
+    font-family: now-bold;
+}
+
+#pop-up {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.conteudo {
+    position: absolute;
+    margin-top: 65px;
+}
