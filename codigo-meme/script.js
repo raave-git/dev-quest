@@ -5,8 +5,8 @@ let cebolinha = new Audio('./assets/cebolinha.mp3')
 //variaveis globais
 let corpo = document.getElementsByClassName('corpo')[0];
 let titulo = document.getElementById('titulo');
-let sub = document.getElementById('subtitulo');
-let h2 = document.getElementById('pergunta');
+let subtitulo = document.getElementById('subtitulo');
+let pergunta = document.getElementById('pergunta');
 let divAtual = document.getElementById('botoes');
 
 //função de click sim
@@ -24,15 +24,15 @@ let respostaSim = document.getElementById('sim').addEventListener('click',()=>{
 
                 titulo.innerHTML = 'Arrasou, bicha!'
 
-                sub.remove();
-                h2.remove();
+                subtitulo.remove();
+                pergunta.remove();
                 divAtual.remove();
 })
 
 //função de click não
 let respostaNao = document.getElementById('nao').addEventListener('click',()=>{
     titulo.innerHTML = 'Bem-vinda à web, Fª.D.P!';
-        h2.innerHTML = 'Então, você é mulher mesmo, né?';
+    pergunta.innerHTML = 'Então, você é mulher mesmo, né?';
 
         let novosBotoes = document.createElement('div');
         let botoes = document.createTextNode('');
@@ -48,8 +48,8 @@ let respostaNao = document.getElementById('nao').addEventListener('click',()=>{
                 titulo.innerHTML = 'Você é uma: ';
                     novosBotoes.innerHTML = '<a href="https://bit.ly/rickroll-009">Agora, clique aqui</a>';
                     
-                    sub.remove();        
-                    h2.remove();
+                    subtitulo.remove();        
+                    pergunta.remove();
 
                 cebolinha.play();
             });
@@ -58,7 +58,7 @@ let respostaNao = document.getElementById('nao').addEventListener('click',()=>{
                 titulo.innerHTML = 'Pois é um viado! E ainda por cima, é um mentiroso!';
                     novosBotoes.innerHTML = '<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Agora, clique aqui</a>';
 
-                    sub.remove();
-                    h2.remove();
+                    subtitulo.remove();
+                    pergunta.remove();
             });
 })
