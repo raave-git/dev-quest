@@ -3,7 +3,7 @@ let pornoGay = new Audio('./assets/click.mp3');
 let cebolinha = new Audio('./assets/cebolinha.mp3')
 
 //variaveis globais
-let corpo = document.getElementsByClassName('corpo')[0];
+let corpo = document.getElementsByClassName('corpo')[0]; //a função .getElementsByClassName() retorna uma array
 let titulo = document.getElementById('titulo');
 let subtitulo = document.getElementById('subtitulo');
 let pergunta = document.getElementById('pergunta');
