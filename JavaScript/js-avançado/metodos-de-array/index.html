@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Métodos de arrays</h1>
+    <article>
+        <h2>.filter()</h2>
+        <p>O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.</p>
+    
+        <pre>
+            <code>
+                const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+    
+                const result = words.filter((word) => word.length > 6);
+    
+                console.log(result);
+                //Output: Array ["exuberant", "destruction", "present"]
+            </code>
+        </pre>
+    </article>
+
+    <article>
+        <h2>.map()</h2>
+
+        <p>O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.</p>
+
+        <pre>
+            <code>
+                const array1 = [1, 4, 9, 16];
+
+                // Pass a function to map
+                const map1 = array1.map((x) => x * 2);
+
+                console.log(map1);
+                // Output: Array [2, 8, 18, 32]
+            </code>
+        </pre>
+    </article>
+
+    <article>
+        <h2>.reduce()</h2>
+
+        <p>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce no MDN</a>
+        </p>
+    </article>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

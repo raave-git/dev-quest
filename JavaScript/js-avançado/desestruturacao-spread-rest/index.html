@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desestruturação, método spread e rest</h1>
+
+    <article><!-- spread -->
+        <h2>spread</h2>
+        <p>O operador de espalhamento é uma funcionalidade que permite expandir objetos iteráveis, como arrays ou strings, em lugares onde se esperam zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays literais).</p>
+
+        <ol>
+            <li>
+                <h3>Chamadas de Funções: </h3>
+                <p>Quando usamos o operador de espalhamento em chamadas de funções, ele permite que um objeto iterável (como um array) seja expandido para ser usado como argumentos da função. Exemplo:</p>
+                
+                    <pre>
+                        <code>
+                            function minhaFuncao(x, y, z) {}
+                            const args = [0, 1, 2];
+                            minhaFuncao(...args);
+                        </code>
+                    </pre>
+                  
+                <p>Antes, se usava a <code>Function.prototype.apply</code> para passar os elementos de um array como argumentos para uma função. Agora, o operador de espalhamento simplifica essa tarefa.</p>
+            </li>
+
+            <li>
+                <h3>Arrays Literais e Strings</h3>
+
+                <p>Podemos usar o operador de espalhamento para criar novos arrays ou strings combinando elementos de outros iteráveis. Exemplo:</p>
+
+                <pre>
+                    <code>
+                        const arrayOriginal = [1, 2, 3];
+                        const novoArray = [...arrayOriginal, 4, 5, 6];
+                    </code>
+                </pre>
+
+                <p>Aqui, <code>novoArray</code> conterá <code>[1, 2, 3, 4, 5, 6]</code>.</p>
+            </li>
+
+            <li>
+                <h3>Espalhamento em Objetos Literais</h3>
+
+                <p>O operador de espalhamento também pode ser usado para criar objetos literais combinando propriedades de outros objetos. Exemplo:</p>
+
+                <pre>
+                    <code>
+                        const objetoOriginal = { a: 1, b: 2 };
+                        const objetoClonado = { ...objetoOriginal, c: 3 };
+                    </code>
+                </pre>
+
+                <p>Agora, <code>objetoClonado</code> terá as propriedades <code>{ a: 1, b: 2, c: 3 }</code></p>
+            </li>
+
+        </ol>
+
+    </article>
+
+    <article><!-- rest -->
+        <h2>rest</h2>
+
+        <p>O parâmetro rest permite representar um número indefinido de argumentos como um array. Ele é usado principalmente em duas situações:</p>
+
+        <ol>
+            <li>
+                <h3>Chamadas de Funções:</h3>
+
+                <p>Quando usamos o parâmetro rest em chamadas de funções, ele nos permite aceitar um número variável de argumentos e tratá-los como um array dentro da função. Exemplo:</p>
+
+                <pre>
+                    <code>
+                        function minhaFuncao(x, y, ...outrosArgs) {
+                            // Faça algo com x, y e outrosArgs (que é um array)
+                        }
+
+                        minhaFuncao(1, 2, 3, 4, 5);
+                    </code>
+                </pre>
+
+                <p>Aqui, <code>outrosArgs</code> conterá <code>[3, 4, 5]</code>.</p>
+            </li>
+
+            <li>
+                <h3>Arrays Literais e Strings:</h3>
+
+                <p>O parâmetro rest também pode ser usado para criar novos arrays ou strings combinando elementos de outros iteráveis. Exemplo:</p>
+                
+                <pre>
+                    <code>
+                        const arrayOriginal = [1, 2, 3];
+                        const novoArray = [...arrayOriginal, 4, 5, 6];
+                    </code>
+                </pre>
+
+                <p>Agora, <code>novoArray</code> conterá <code>[1, 2, 3, 4, 5, 6]</code>.</p>
+            </li>
+        </ol>
+     
+        <p>Em resumo, o parâmetro rest é uma maneira flexível de lidar com um número variável de argumentos em funções, permitindo que os argumentos sejam tratados como um array.</p>
+    </article>
+    
+    <script src="script.js"></script>
+</body>
+</html>
